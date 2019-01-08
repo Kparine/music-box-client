@@ -57,4 +57,17 @@ class ArtistForm extends Component {
   }
 }
 
-export default ArtistForm
+const mapStateToProps = (state) => {
+  return {
+    artists: state.artists
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    dispatch
+  }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(ArtistForm)
